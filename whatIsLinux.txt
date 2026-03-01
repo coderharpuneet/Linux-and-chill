@@ -1,0 +1,7 @@
+What is OS?
+
+Sofware that manages computer hardware and software resources 
+and provides common services for computer programs.
+
+Linux Distributions -> is a collection of sofware applicaions
+                       built on top of the Linux kernel and OS. 
