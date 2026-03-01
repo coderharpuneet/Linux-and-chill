@@ -1,0 +1,14 @@
+man -> the man command stand for mannual. It is used to see official
+       doumentation of any command.
+
+uptime -> Shows how long the system has been during running along with load information.
+10:42:15 up 2 hours, 15 min, 1 user, load average: 0.12, 0.08, 0.05
+        Part	                              Meaning
+10:42:15	                        Current system time
+up 2 hours, 15 min	                System uptime (how long system is ON)
+1 user	                            Number of logged-in users
+load average: 0.12, 0.08, 0.05	    CPU load over last 1, 5, 15 minutes
+
+
+uptime -p -> Shows uptime in prettier format.
+
