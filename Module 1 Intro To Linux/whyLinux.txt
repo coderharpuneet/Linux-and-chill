@@ -1,0 +1,14 @@
+Why Linux?
+
+1. Reliability
+2. Free to use
+3. Software Management
+4. Hardware
+5. Security
+6. Performance 
+7. Freedom
+8. Customization
+9. The command line
+10. Community
+
+
