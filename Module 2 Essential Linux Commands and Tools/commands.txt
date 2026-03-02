@@ -1,0 +1,8 @@
+ls-> List of all the files and directories in that folder
+ls -l -> List in Long format
+ls -a -> list of all files and dir. including hidden ones also
+pwd -> present working directory
+cp source destination -> copy files
+cp -v sourcce destination -> copy files and tells what is copied where.(v- verbose)
+mv source destination -> Moves the files (just like cut and paste).
+mv -v source destination -> moves and tells which is moved where (v - verbose)
