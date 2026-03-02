@@ -1,0 +1,69 @@
+/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+│   ├── user1
+│   ├── user2
+│   └── user3
+├── root
+├── run
+├── sbin
+├── tmp
+├── usr
+│   ├── bin
+│   ├── lib
+│   ├── local
+│   └── share
+└── var
+    └── tmp
+
+/usr -> * in this directory we can find the installed applications
+          on the system.
+        * We can also find the shared libraries in this dir.
+
+/usr/bin -> * The bin directory has binary files for commands that
+              are used by any user on the Linux System.
+            * Commands like cp, mv are in this dir.
+
+/usr/sbin -> * This directory also contains binary files for 
+               commands as the bin dir. but these files are 
+               executed by Linux users who have admin priveleges 
+               on the system to maintain and configure.
+
+/usr/local -> * We use this directory as a path of installed
+                applications so we can say that this folder is 
+                similar to the Program files folder in Windows.
+
+/etc -> * etc directory has the configuration files of the system 
+          and it also has the configuration files of any application
+          that is installed using the command.
+
+/var -> * The var directory has all the files whose content is 
+          expected to continually change or whose sie is expected
+          to increase or decrease by time.
+        * eg. log files and database files.
+
+/run -> * Information about the running system since last boot.
+        * The run diretory has the process ID for each running 
+          service.
+        * The content of run directory is recreated each time 
+          you reboot the system.
+
+/home -> * Stores each user home directory on the linux.
+         * When you create a user, the system will create a 
+           home directory.
+
+/root -> * Home directory of the user root.
+         * Files that belong to user root are present here.
+
+/tmp -> * Has temporary files that is used by a user application 
+          or the system.
+        * All files present in this directory older than 10 days 
+          are deleted automatically.
+
+/dev -> * Dev directory has all device files that is used by 
+          the system to access the hardware such as the hard disks.
+
+/boot -> * Boot loader files such as kernels.
