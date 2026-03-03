@@ -8,3 +8,5 @@ Lonox
 9Linux
 352727
 L{i}nux
+LLIINNUUXX
+Hello Linux User

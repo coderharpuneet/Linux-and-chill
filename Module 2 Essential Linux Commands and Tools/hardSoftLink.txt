@@ -1,0 +1,16 @@
+Hard Link
+
+command: ln original.txt hardlink.txt
+
+* Both files share the same inode
+* Data is stored at one place
+* if one is deleted other remains safe.
+
+
+Soft Link (Symbolic Link)
+
+command: ln -s original.txt softlink.txt
+
+* Just a pointer.
+
+
