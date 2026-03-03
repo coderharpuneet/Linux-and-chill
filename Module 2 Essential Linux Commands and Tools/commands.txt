@@ -13,3 +13,9 @@ rm -r dir -> Deletes a non-empty directory.
 cat file.txt -> Shows all the contents of the file on the terminal.
 cat > file.txt -> if old file then overwrites the file and you can start writing from the beggining else new file is created.
 cat file1.txt > file2.txt -> Copies the content of file1 in file 2.
+grep "hello" file.txt -> Prints all the lines that have "hello" in them.
+grep -i "hello" file.txt -> Case insensitive.
+grep "^H" file.txt ->  Start with H.
+grep "x$" file.txt -> End with x.
+grep "^l.*x$" file.txt -> line starting with l and ending with x.
+grep [hf] file.txt -> The Line either contains "h" or "f".
