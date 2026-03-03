@@ -6,3 +6,10 @@ cp source destination -> copy files
 cp -v sourcce destination -> copy files and tells what is copied where.(v- verbose)
 mv source destination -> Moves the files (just like cut and paste).
 mv -v source destination -> moves and tells which is moved where (v - verbose)
+mkdir -> Creates a directory.
+touch -> Creates a File.
+rmdir -> Deletes an empty directory.
+rm -r dir -> Deletes a non-empty directory.
+cat file.txt -> Shows all the contents of the file on the terminal.
+cat > file.txt -> if old file then overwrites the file and you can start writing from the beggining else new file is created.
+cat file1.txt > file2.txt -> Copies the content of file1 in file 2.
