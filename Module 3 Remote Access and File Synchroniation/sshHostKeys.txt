@@ -1,0 +1,122 @@
+# SSH HOST KEYS NOTES
+
+## What are SSH Host Keys?
+
+SSH host keys represent the digital identity of a server. When a client connects to a server using SSH for the first time, the server sends its host key so that the client can verify the server's identity.
+
+If the identity matches → connection is safe.
+If the identity changes → SSH shows a security warning.
+
+---
+
+## Simple Concept
+
+Client (your computer)
+|
+|  SSH connection
+v
+Server
+|
+---> Host Key (server identity)
+
+The server sends its host key to the client so the client can verify that it is connecting to the correct server.
+
+---
+
+## First Time SSH Connection
+
+Example command:
+
+ssh user@remoteserver
+
+When connecting for the first time, SSH shows a message like:
+
+The authenticity of host 'remoteserver' can't be established.
+ED25519 key fingerprint is SHA256:.....
+Are you sure you want to continue connecting (yes/no)?
+
+If you type:
+
+yes
+
+SSH will show:
+
+Warning: Permanently added 'remoteserver' to the list of known hosts.
+
+This means the server key has been saved locally.
+
+---
+
+## Where SSH Host Keys are Stored
+
+On the CLIENT machine:
+
+~/.ssh/known_hosts
+
+This file stores all trusted servers and their keys.
+
+Example entry in the file:
+
+remoteserver ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAA...
+
+---
+
+## Server Side Host Keys
+
+On the server, host keys are stored in:
+
+/etc/ssh/
+
+Common files include:
+
+/etc/ssh/ssh_host_rsa_key
+/etc/ssh/ssh_host_ecdsa_key
+/etc/ssh/ssh_host_ed25519_key
+
+These files represent the server's identity.
+
+---
+
+## Common SSH Host Key Types
+
+RSA      → Older but widely supported
+ECDSA    → Faster cryptography
+ED25519  → Modern, secure, recommended
+
+---
+
+## Security Warning Example
+
+If the host key changes, SSH will show:
+
+WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
+
+Possible reasons:
+
+1. The server was reinstalled
+2. The server IP now belongs to another machine
+3. Possible man-in-the-middle attack
+
+---
+
+## Fix (Remove Old Key)
+
+Remove the old key using:
+
+ssh-keygen -R remoteserver
+
+Or manually edit the file:
+
+nano ~/.ssh/known_hosts
+
+---
+
+## Quick Summary
+
+SSH host keys are used for server identity verification.
+
+• First connection requires confirmation.
+• Trusted keys are stored in ~/.ssh/known_hosts.
+• Server host keys are stored in /etc/ssh/.
+• If the key changes, SSH
+

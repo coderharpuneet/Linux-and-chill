@@ -1,0 +1,50 @@
+What is SSH?
+
+Secure Shell is a protocol used to securely connect to another 
+computer over a network. It allows you to control a remote system 
+through the terminal.
+
+Basic Command: ssh username@ip
+
+here, username is the user account on remote machine
+and ip is the IP address of the remote machine.
+
+Eg. ssh ubuntu@192.168.1.10
+
+which means "ubuntu" is trying to log in to the machine whose IP 
+address is 192.168.1.10.
+When the command runs, the system will ask for the password.
+After entering the correct password, you will be logged into 
+the remote machine's terminal.
+To come bachk to your local machine type exit.
+
+Real Life Use Case:
+SSH is commonly used to connect to:
+Remote Linux servers
+Cloud servers (AWS, Azure, etc.)
+Virtual Machines
+Other computers on the same network
+
+
+Common SSH Options:
+1. Connect using a specific port
+   ssh username@ip -p 2222
+
+2. Run a command on the remote machine
+   ssh username@ip "ls -l"
+
+3. Login using an SSH key
+   ssh -i key.pem username@ip
+
+
+Requirement for SSH:
+1. The remote machine must have an SSH server installed.
+
+2. Install SSH server in Ubuntu:
+   sudo apt install openssh-server
+
+3. Start the SSH service:
+   sudo systemctl start ssh
+
+Example Practice Command:
+ssh student@192.168.56.101
